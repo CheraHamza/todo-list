@@ -15,6 +15,7 @@
             <button class="view-tomorrow">Tomorrow</button>
             <button class="view-inbox">Inbox</button>
         </div>
+        <hr>
         <div class="lists-filter">
             <div class="lists-header">Lists</div>
             <button class="view-personal">Personal</button>
@@ -22,6 +23,7 @@
             <button class="view-fitness">Fitness</button>
             <button class="view-learning">Learning</button>
         </div>
+        <hr>
         <div class="status-filter">
             <button class="view-completed">Completed</button>
             <button class="view-wontDo">Won't Do</button>
@@ -30,8 +32,81 @@
     </div>
 
     <div class="content">
+        <div class="tasks-container">
+            <div class="active-list-header">All</div>
+            <div class="add-task-bar">
+                <input type="text" class="add-task" placeholder="Add a task...">
+            </div>
+            
+            <div class="tasks">
+                <div class="task">
+                    <input type="checkbox" class="task-checkbox">
+                    <input class="task-content" value="Clean your room"> 
+                    <div class="task-information">
+                        <div class="task-date">
+                            june 12
+                        </div>
+                        <div class="task-list">
+                            Personal
+                        </div>
+                    </div>
+                </div>  
+                <hr>
+                <div class="task">
+                    <input type="checkbox" class="task-checkbox">
+                    <input class="task-content" value="Clean your room"> 
+                    <div class="task-information">
+                        <div class="task-date">
+                            june 12
+                        </div>
+                        <div class="task-list">
+                            Personal
+                        </div>
+                    </div>
+                </div>  
+                <hr>
+                <div class="task">
+                    <input type="checkbox" class="task-checkbox">
+                    <input class="task-content" value="Clean your room"> 
+                    <div class="task-information">
+                        <div class="task-date">
+                            june 12
+                        </div>
+                        <div class="task-list">
+                            Personal
+                        </div>
+                    </div>
+                </div>
+                <hr> 
+            </div>
+        </div>
+        <div class="task-details">
+            <div class="task-date-status">
+                <input type="checkbox" class="task-checkbox">
+                <input type="date" class="task-date" onfocus="this.showPicker()">
+            </div>
+            <hr>
+            <div class="task-header-description">
+                <div class="task-header">
+                    <input type="text" class="task-content" value="Clean Your room">
+                </div>
+                 <textarea class="task-description" placeholder="Add a description..."></textarea>
+                <div class="task-actions">
+                    <select name="list-selection"  id="list-selection">
+                        <option value="Inbox">Inbox</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Learning">Learning</option>
+                    </select>
 
+                </div>
+        </div>
     </div>
+        
+        
+
+
 
 </body>
 

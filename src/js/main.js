@@ -10,6 +10,10 @@ import learningIcon from '../assets/icons/learning.svg'
 import completedIcon from '../assets/icons/completed.svg'
 import wontDoIcon from '../assets/icons/wont-do.svg'
 import trashIcon from '../assets/icons/trash.svg'
+import calendarIcon from '../assets/icons/calendar.svg'
+import checklistIcon from '../assets/icons/checklist.svg'
+import selectTaskIllustration from '../assets/icons/select-task.svg'
+import { add } from 'date-fns'
 
 
 function sideIconLaod() {
@@ -36,10 +40,54 @@ function sideIconLaod() {
     }
 }
 
+function addTask(){
+    const addTaskBar = document.querySelector('.add-task-bar');
+    const calendar = document.createElement('img');
+    calendar.classList.add('calendar-icon');
+    calendar.src = calendarIcon;
+    addTaskBar.appendChild(calendar);
+}
+
+function addChecklist(){
+    const taskHeader = document.querySelector('.task-header');
+    const checklist = document.createElement('img');
+    checklist.classList.add('checklist-icon');
+    checklist.src = checklistIcon;
+    taskHeader.appendChild(checklist)
+}
+
+function addDeleteAction(){
+    const taskActions = document.querySelector('.task-actions');
+    const deleteIcon = document.createElement('img');
+    deleteIcon.classList.add('delete-icon');
+    deleteIcon.src = trashIcon;
+    taskActions.appendChild(deleteIcon);
+}
+
+function addSelectIllustation(){
+    const taskDetails = document.querySelector('.task-details');
+    const selectTask = document.createElement('img');
+    const caption = document.createElement('p');
+
+    caption.classList.add('select-task-caption');
+    caption.textContent = 'Select a task to see details';
+
+    selectTask.classList.add('select-task-illustration');
+    selectTask.src = selectTaskIllustration;
+
+    taskDetails.appendChild(selectTask);
+    taskDetails.appendChild(caption);
+}
 
 function initLoad() {
     sideIconLaod();
+    addTask();
+    // addSelectIllustation();
+    addChecklist();
+    addDeleteAction();
 }
 
 
 initLoad();
+
+
